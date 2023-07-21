@@ -1,0 +1,334 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-07-19T10:41:06.282Z",
+    "end": "2023-07-19T10:41:08.167Z",
+    "duration": 1885,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3bcaec70-1a59-45ea-8558-17ae84322a2d",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0705cf4b-b88a-4935-b3c9-fc826a18c295",
+          "title": "Base URL from Property File Tests",
+          "fullFile": "D:\\Prasad-SWQA\\SWQA Project\\API Automation\\api-testing-axios-mocha-chai-javascript\\api-tests\\baseUrl_from_property.js",
+          "file": "\\api-tests\\baseUrl_from_property.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able get baseUrl from property file",
+              "fullTitle": "Base URL from Property File Tests should be able get baseUrl from property file",
+              "timedOut": false,
+              "duration": 116,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(properties.get(\"baseUrl\"));\nconst res = await axios.get(properties.get(\"baseUrl\") + '/users');\nconsole.log(res.data);\nexpect(res.status).equal(200);\nexpect(res.data.page).equal(1);\nexpect(res.data.per_page).equal(6);",
+              "err": {},
+              "uuid": "797c35c1-a2e2-4626-a507-82df91e8f9fa",
+              "parentUUID": "0705cf4b-b88a-4935-b3c9-fc826a18c295",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "797c35c1-a2e2-4626-a507-82df91e8f9fa"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 116,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "82176ecd-aeac-4e40-ad6d-8de31094e4a5",
+          "title": "DELETE API Request Tests",
+          "fullFile": "D:\\Prasad-SWQA\\SWQA Project\\API Automation\\api-testing-axios-mocha-chai-javascript\\api-tests\\delete_request.js",
+          "file": "\\api-tests\\delete_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able delete user with id 2",
+              "fullTitle": "DELETE API Request Tests should be able delete user with id 2",
+              "timedOut": false,
+              "duration": 330,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await axios.delete('https://reqres.in/api/users/2');\nconsole.log(res.data);\nexpect(res.status).equal(204);",
+              "err": {},
+              "uuid": "3f285717-e53a-4d25-a58e-63bee7a11b61",
+              "parentUUID": "82176ecd-aeac-4e40-ad6d-8de31094e4a5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3f285717-e53a-4d25-a58e-63bee7a11b61"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 330,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "93cd77d5-064b-45ba-995e-05ebc7eda9e6",
+          "title": "GET API Request Tests",
+          "fullFile": "D:\\Prasad-SWQA\\SWQA Project\\API Automation\\api-testing-axios-mocha-chai-javascript\\api-tests\\get_request.js",
+          "file": "\\api-tests\\get_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able get user list",
+              "fullTitle": "GET API Request Tests should be able get user list",
+              "timedOut": false,
+              "duration": 86,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await axios.get('https://reqres.in/api/users?page=2');\nconsole.log(res.data);\nexpect(res.data.page).equal(2);\nexpect(res.data.per_page).equal(6);",
+              "err": {},
+              "uuid": "2ee4cb79-4468-468b-a081-e3c750c3b601",
+              "parentUUID": "93cd77d5-064b-45ba-995e-05ebc7eda9e6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2ee4cb79-4468-468b-a081-e3c750c3b601"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 86,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "746d1b4b-d57d-4434-9439-1d4b86a9a403",
+          "title": "PATCH API Request Tests",
+          "fullFile": "D:\\Prasad-SWQA\\SWQA Project\\API Automation\\api-testing-axios-mocha-chai-javascript\\api-tests\\patch_request.js",
+          "file": "\\api-tests\\patch_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able update name of the user",
+              "fullTitle": "PATCH API Request Tests should be able update name of the user",
+              "timedOut": false,
+              "duration": 332,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// const randomName = faker.name.findName();\n// const randomJobTitle = faker.name.jobTitle();\nconst randomName = faker.person.fullName();\nconst randomJobTitle = faker.person.jobTitle();\nconst res = await axios.patch('https://reqres.in/api/users/2',\n    {\n        \"name\": randomName\n    }\n).then(res => res.data)\nconsole.log(res);\nexpect(res.name).equal(randomName);",
+              "err": {},
+              "uuid": "6dd05df0-27b9-478a-91c7-68eb18cc2382",
+              "parentUUID": "746d1b4b-d57d-4434-9439-1d4b86a9a403",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6dd05df0-27b9-478a-91c7-68eb18cc2382"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 332,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "f8e28659-76a9-417a-a3f7-658179fc47a9",
+          "title": "POST API Request Tests",
+          "fullFile": "D:\\Prasad-SWQA\\SWQA Project\\API Automation\\api-testing-axios-mocha-chai-javascript\\api-tests\\post_request.js",
+          "file": "\\api-tests\\post_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able post a user",
+              "fullTitle": "POST API Request Tests should be able post a user",
+              "timedOut": false,
+              "duration": 334,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// const randomName = faker.name.findName();\n// const randomJobTitle = faker.name.jobTitle();\nconst randomName = faker.person.fullName();\nconst randomJobTitle = faker.person.jobTitle();\nconst res = await axios.post('https://reqres.in/api/users',\n    {\n        \"name\": randomName,\n        \"job\": randomJobTitle\n    }\n).then(res => res.data)\nconsole.log(res);\nexpect(res.name).equal(randomName);\nexpect(res.job).equal(randomJobTitle);",
+              "err": {},
+              "uuid": "9a4dea45-ff30-488c-ba2b-deb994628950",
+              "parentUUID": "f8e28659-76a9-417a-a3f7-658179fc47a9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9a4dea45-ff30-488c-ba2b-deb994628950"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 334,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "d07e8b1b-4d91-4c7b-87fc-2a8982195d9a",
+          "title": "PUT API Request Tests",
+          "fullFile": "D:\\Prasad-SWQA\\SWQA Project\\API Automation\\api-testing-axios-mocha-chai-javascript\\api-tests\\put_request.js",
+          "file": "\\api-tests\\put_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able update a user",
+              "fullTitle": "PUT API Request Tests should be able update a user",
+              "timedOut": false,
+              "duration": 324,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// const randomName = faker.name.findName();\n// const randomJobTitle = faker.name.jobTitle();\nconst randomName = faker.person.fullName();\nconst randomJobTitle = faker.person.jobTitle();\nconst res = await axios.put('https://reqres.in/api/users/2',\n    {\n        \"name\": randomName,\n        \"job\": randomJobTitle\n    }\n).then(res => res.data)\nconsole.log(res);\nexpect(res.name).equal(randomName);\nexpect(res.job).equal(randomJobTitle);",
+              "err": {},
+              "uuid": "36bfa56c-4ad6-4387-8ea2-374a39b4e7ac",
+              "parentUUID": "d07e8b1b-4d91-4c7b-87fc-2a8982195d9a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "36bfa56c-4ad6-4387-8ea2-374a39b4e7ac"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 324,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "d1230645-fdcf-4471-8872-e1da61a470b8",
+          "title": "Write Data Tests",
+          "fullFile": "D:\\Prasad-SWQA\\SWQA Project\\API Automation\\api-testing-axios-mocha-chai-javascript\\api-tests\\write_data_to_json.js",
+          "file": "\\api-tests\\write_data_to_json.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able write data to JSON",
+              "fullTitle": "Write Data Tests should be able write data to JSON",
+              "timedOut": false,
+              "duration": 333,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// const randomName = faker.name.findName();\n// const randomJobTitle = faker.name.jobTitle();\nconst randomName = faker.person.fullName();\nconst randomJobTitle = faker.person.jobTitle();\nconst res = await axios.post('https://reqres.in/api/users',\n    {\n        \"name\": randomName,\n        \"job\": randomJobTitle\n    }\n).then(res => res.data)\nconsole.log(res);\nexpect(res.name).equal(randomName);\nexpect(res.job).equal(randomJobTitle);\npostResData.name = res.name; // get and set the token to env variable\npostResData.job = res.job;\npostResData.id = res.id;\npostResData.createdAt = res.createdAt;\nfs.writeFileSync(\"./response-data/post_response_data.json\", JSON.stringify(postResData)); // write the post response data to the post_response_data.json file",
+              "err": {},
+              "uuid": "52f1be0c-df48-4d97-bdcc-a11e4527997e",
+              "parentUUID": "d1230645-fdcf-4471-8872-e1da61a470b8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "52f1be0c-df48-4d97-bdcc-a11e4527997e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 333,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 10000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
