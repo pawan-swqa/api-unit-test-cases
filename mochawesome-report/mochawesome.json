@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "suites": 7,
+    "tests": 7,
+    "passes": 7,
     "pending": 0,
     "failures": 0,
-    "start": "2023-07-21T08:59:24.597Z",
-    "end": "2023-07-21T08:59:24.644Z",
-    "duration": 47,
-    "testsRegistered": 1,
+    "start": "2023-07-25T09:18:46.061Z",
+    "end": "2023-07-25T09:18:47.814Z",
+    "duration": 1753,
+    "testsRegistered": 7,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,16 +18,94 @@
   },
   "results": [
     {
-      "uuid": "c47df5ee-aa45-4b65-b98a-fdfecb6334cd",
+      "uuid": "e987864c-83b4-4432-b274-60bec8651996",
       "title": "",
-      "fullFile": "C:\\Official_Projects\\api-unit-test-cases\\api-tests\\get_request.js",
-      "file": "\\api-tests\\get_request.js",
+      "fullFile": "",
+      "file": "",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "a237fbec-42ff-4fd1-9a5f-fda15e6926f5",
+          "uuid": "02e1cc03-1dc3-47aa-8102-97353a91d021",
+          "title": "Base URL from Property File Tests",
+          "fullFile": "C:\\Official_Projects\\api-unit-test-cases\\api-tests\\baseUrl_from_property.js",
+          "file": "\\api-tests\\baseUrl_from_property.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able get baseUrl from property file",
+              "fullTitle": "Base URL from Property File Tests should be able get baseUrl from property file",
+              "timedOut": false,
+              "duration": 124,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(properties.get(\"baseUrl\"));\nconst res = await axios.get(properties.get(\"baseUrl\") + '/users');\nconsole.log(res.data);\nexpect(res.status).equal(200);\nexpect(res.data.page).equal(1);\nexpect(res.data.per_page).equal(6);",
+              "err": {},
+              "uuid": "3b0c5ec5-0f4f-4e8e-83e4-e5baf9bfbb79",
+              "parentUUID": "02e1cc03-1dc3-47aa-8102-97353a91d021",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3b0c5ec5-0f4f-4e8e-83e4-e5baf9bfbb79"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 124,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "c84d04ef-20f7-4396-96a5-520cc8fcdef2",
+          "title": "DELETE API Request Tests",
+          "fullFile": "C:\\Official_Projects\\api-unit-test-cases\\api-tests\\delete_request.js",
+          "file": "\\api-tests\\delete_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able delete user with id 2",
+              "fullTitle": "DELETE API Request Tests should be able delete user with id 2",
+              "timedOut": false,
+              "duration": 306,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await axios.delete('https://reqres.in/api/users/2');\nconsole.log(res.data);\nexpect(res.status).equal(204);",
+              "err": {},
+              "uuid": "86184c89-127f-4531-bef2-8e97eb884ac6",
+              "parentUUID": "c84d04ef-20f7-4396-96a5-520cc8fcdef2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "86184c89-127f-4531-bef2-8e97eb884ac6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 306,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "9173e315-0d50-422f-bcba-d0aedec86282",
           "title": "GET API Request Tests",
           "fullFile": "C:\\Official_Projects\\api-unit-test-cases\\api-tests\\get_request.js",
           "file": "\\api-tests\\get_request.js",
@@ -35,32 +113,188 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "should be able get test data as test and status code as 200",
-              "fullTitle": "GET API Request Tests should be able get test data as test and status code as 200",
+              "title": "should be able get user list",
+              "fullTitle": "GET API Request Tests should be able get user list",
               "timedOut": false,
-              "duration": 41,
+              "duration": 58,
               "state": "passed",
               "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const res = await axios.get('http://localhost:3000/api/v1/test/get-api/test');\nconsole.log(res.data , 'response==============');\nexpect(res.data.data).equal('testData');\nexpect(res.data.code).equal(200);\nexpect(res.data.status).equal('success');",
+              "code": "const res = await axios.get('https://reqres.in/api/users?page=2');\nconsole.log(res.data);\nexpect(res.data.page).equal(2);\nexpect(res.data.per_page).equal(6);",
               "err": {},
-              "uuid": "ab862b92-49c1-477f-983a-25f779bb16d9",
-              "parentUUID": "a237fbec-42ff-4fd1-9a5f-fda15e6926f5",
+              "uuid": "45abb69f-19b5-457f-8914-243edcef2178",
+              "parentUUID": "9173e315-0d50-422f-bcba-d0aedec86282",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ab862b92-49c1-477f-983a-25f779bb16d9"
+            "45abb69f-19b5-457f-8914-243edcef2178"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 41,
+          "duration": 58,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "561eb757-a66a-4db7-8009-1cf0468bff35",
+          "title": "PATCH API Request Tests",
+          "fullFile": "C:\\Official_Projects\\api-unit-test-cases\\api-tests\\patch_request.js",
+          "file": "\\api-tests\\patch_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able update name of the user",
+              "fullTitle": "PATCH API Request Tests should be able update name of the user",
+              "timedOut": false,
+              "duration": 317,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// const randomName = faker.name.findName();\n// const randomJobTitle = faker.name.jobTitle();\nconst randomName = faker.person.fullName();\nconst randomJobTitle = faker.person.jobTitle();\nconst res = await axios.patch('https://reqres.in/api/users/2',\n    {\n        \"name\": randomName\n    }\n).then(res => res.data)\nconsole.log(res);\nexpect(res.name).equal(randomName);",
+              "err": {},
+              "uuid": "887f2dfd-274a-4f3e-b8ee-fdc7e5532496",
+              "parentUUID": "561eb757-a66a-4db7-8009-1cf0468bff35",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "887f2dfd-274a-4f3e-b8ee-fdc7e5532496"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 317,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "89328b26-d40e-46e1-9cfd-4120f6c72009",
+          "title": "POST API Request Tests",
+          "fullFile": "C:\\Official_Projects\\api-unit-test-cases\\api-tests\\post_request.js",
+          "file": "\\api-tests\\post_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able post a user",
+              "fullTitle": "POST API Request Tests should be able post a user",
+              "timedOut": false,
+              "duration": 311,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// const randomName = faker.name.findName();\n// const randomJobTitle = faker.name.jobTitle();\nconst randomName = faker.person.fullName();\nconst randomJobTitle = faker.person.jobTitle();\nconst res = await axios.post('https://reqres.in/api/users',\n    {\n        \"name\": randomName,\n        \"job\": randomJobTitle\n    }\n).then(res => res.data)\nconsole.log(res);\nexpect(res.name).equal(randomName);\nexpect(res.job).equal(randomJobTitle);",
+              "err": {},
+              "uuid": "9904c83c-13e4-4ae7-8a20-ce18fe42a5b5",
+              "parentUUID": "89328b26-d40e-46e1-9cfd-4120f6c72009",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9904c83c-13e4-4ae7-8a20-ce18fe42a5b5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 311,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "f5ad05d3-4aaa-4cf8-a5a8-b0b05b058893",
+          "title": "PUT API Request Tests",
+          "fullFile": "C:\\Official_Projects\\api-unit-test-cases\\api-tests\\put_request.js",
+          "file": "\\api-tests\\put_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able update a user",
+              "fullTitle": "PUT API Request Tests should be able update a user",
+              "timedOut": false,
+              "duration": 311,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// const randomName = faker.name.findName();\n// const randomJobTitle = faker.name.jobTitle();\nconst randomName = faker.person.fullName();\nconst randomJobTitle = faker.person.jobTitle();\nconst res = await axios.put('https://reqres.in/api/users/2',\n    {\n        \"name\": randomName,\n        \"job\": randomJobTitle\n    }\n).then(res => res.data)\nconsole.log(res);\nexpect(res.name).equal(randomName);\nexpect(res.job).equal(randomJobTitle);",
+              "err": {},
+              "uuid": "3f3e6efa-245a-4650-86e7-fc77a97a808a",
+              "parentUUID": "f5ad05d3-4aaa-4cf8-a5a8-b0b05b058893",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3f3e6efa-245a-4650-86e7-fc77a97a808a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 311,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "9abdba56-8bf0-4272-a87b-a67b6b95eb54",
+          "title": "Write Data Tests",
+          "fullFile": "C:\\Official_Projects\\api-unit-test-cases\\api-tests\\write_data_to_json.js",
+          "file": "\\api-tests\\write_data_to_json.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able write data to JSON",
+              "fullTitle": "Write Data Tests should be able write data to JSON",
+              "timedOut": false,
+              "duration": 295,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// const randomName = faker.name.findName();\n// const randomJobTitle = faker.name.jobTitle();\nconst randomName = faker.person.fullName();\nconst randomJobTitle = faker.person.jobTitle();\nconst res = await axios.post('https://reqres.in/api/users',\n    {\n        \"name\": randomName,\n        \"job\": randomJobTitle\n    }\n).then(res => res.data)\nconsole.log(res);\nexpect(res.name).equal(randomName);\nexpect(res.job).equal(randomJobTitle);\npostResData.name = res.name; // get and set the token to env variable\npostResData.job = res.job;\npostResData.id = res.id;\npostResData.createdAt = res.createdAt;\nfs.writeFileSync(\"./response-data/post_response_data.json\", JSON.stringify(postResData)); // write the post response data to the post_response_data.json file",
+              "err": {},
+              "uuid": "cb0dbea5-ca6c-414a-aac4-d5d6bcded0f5",
+              "parentUUID": "9abdba56-8bf0-4272-a87b-a67b6b95eb54",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cb0dbea5-ca6c-414a-aac4-d5d6bcded0f5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 295,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
